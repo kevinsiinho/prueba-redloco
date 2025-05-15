@@ -1,4 +1,3 @@
-# server/app.py
 
 #librerias necesarias
 from flask import Flask, request, jsonify
@@ -15,6 +14,7 @@ db = mongo.db  # Acceso a la base de datos
 
 
 #CRUD apis
+
 @app.route('/items', methods=['GET'])
 def get_items():
     items = list(db.items.find({}))  # Obtener todos los items
